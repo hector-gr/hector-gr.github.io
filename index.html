@@ -41,12 +41,54 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research</heading>
               <p>
-                I'm interested in multimodal deep learning: improving efficiency using adaptable networks, and using more contextualised representations for sequential decision making tasks.
+                I'm interested in multimodal representation learning: improving efficiency and reliability using adaptable networks with adjustable compute budgets, and using more contextualised representations for sequential decision making tasks.
               </p>
             </td>
           </tr>
         </tbody></table>
         
+        <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr onmouseout="template_stop()" onmouseover="template_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='template_image'>
+                  <img src='images/TemplateFigure1.png' width="160"></div>
+                <img src='images/TemplateFigure2.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function template_start() {
+                  document.getElementById('template_image').style.opacity = "1";
+                }
+
+                function template_stop() {
+                  document.getElementById('template_image').style.opacity = "0";
+                }
+                template_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+             <a href="https://">
+                <papertitle>Template Title</papertitle>
+             </a>
+              <br>
+              <strong>Hector Garcia Rodriguez</strong>,
+              <a href="https://template.com">Template Author</a>
+              <br>
+              <em>Template Conference</em> category, year
+              <br>
+              <a href="https://template.com">arXiv</a> /
+              <a href="https://template.com">code</a> /
+		          <a href="https://template.com">talk</a> /
+              <a href="https://template.com">poster</a> /
+              <a href="https://template.com">slides</a>
+              <p></p>
+              <p>
+                Template Abstract.
+              </p>
+            </td>
+          </tr> -->
+
+
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr onmouseout="softhebb_stop()" onmouseover="softhebb_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -67,7 +109,7 @@
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-             <a href="https://arxiv.org/abs/2209.11883">
+             <a href="https://openreview.net/forum?id=8gd4M-_Rj1">
                 <papertitle>Hebbian Deep Learning Without Feedback</papertitle>
              </a>
               <br>
@@ -76,13 +118,18 @@
               <a href="https://openreview.net/profile?id=~Qinghai_Guo1">Qinghai Guo</a>,
               <a href="https://twitter.com/timos_m">Timoleon Moraitis</a>
               <br>
-              <em>To appear in ICLR</em>, 2023
+              <em>ICLR</em> notable-top-25% (spotlight), 2023
               <br>
-              <a href="https://arxiv.org/abs/2209.11883">arXiv</a>
+              <a href="https://arxiv.org/abs/2209.11883">arXiv</a> /
+              <a href="https://github.com/NeuromorphicComputing/SoftHebb">code</a> /
+		          <a href="https://iclr.cc/virtual/2023/oral/12759">talk</a>
+              <!-- TODO: self host? -->
+              <!-- <a href="">poster</a> /
+              <a href="">slides</a> -->
               <p></p>
               <p>
-                We train deep ConvNets with a Hebbian soft winner-take-all algorithm, multilayer SoftHebb. 
-				With an added linear probe, it achieves competitive results in image classification in CIFAR-10, STL-10 and ImageNet when compared to other biologically plausible baselines.
+                We train deep ConvNets with an unsupervised Hebbian soft winner-take-all algorithm, multilayer SoftHebb. 
+				        It sets SOTA results in image classification in CIFAR-10, STL-10 and ImageNet for other biologically plausible networks.
               	SoftHebb increases biological compatibility, parallelisation and performance of state-of-the-art bio-plausible learning.
               </p>
             </td>
@@ -107,8 +154,9 @@
                 stpn_stop()
               </script>
             </td>
+            <!-- https://icml.cc/virtual/2022/poster/18309 -->
             <td style="padding:20px;width:75%;vertical-align:middle">
-             <a href="https://icml.cc/virtual/2022/poster/18309">
+             <a href="https://proceedings.mlr.press/v162/rodriguez22b.html">
                 <papertitle>Short-Term Plasticity Neurons Learning to Learn and Forget</papertitle>
              </a>
               <br>
@@ -118,14 +166,15 @@
               <br>
               <em>ICML</em>, 2022
               <br>
-              <a href="https://arxiv.org/abs/2206.14048">arXiv</a>
-		  /
-		  <a href="https://icml.cc/virtual/2022/poster/18309">talk</a>
-              /
-              <a href="https://github.com/NeuromorphicComputing/stpn">code</a>
+              <a href="https://arxiv.org/abs/2206.14048">arXiv</a> /
+              <a href="https://github.com/NeuromorphicComputing/stpn">code</a> /
+		          <a href="https://icml.cc/virtual/2022/session/20094">talk</a> /
+              <a href="https://icml.cc/media/PosterPDFs/ICML%202022/a2802cade04644083dcde1c8c483ed9a_ffbgBL0.png?t=1657797504.7412221">poster</a> /
+              <a href="https://icml.cc/media/icml-2022/Slides/18309.pdf">slides</a>
               <p></p>
               <p>
-                STPN is a recurrent neural network that improves Supervised and Reinforcement Learning by meta-learning to adapt its weights to the recent context, inspired by computational neuroscience. Additionally, STPN shows higher energy efficiency in a simulated neuromorphic implementation due to its optimised explicit forgetting mechanism.
+                STPN is a recurrent neural network that improves Supervised and Reinforcement Learning by meta-learning to adapt its weights to the recent context, inspired by computational neuroscience.
+                Additionally, STPN shows higher energy efficiency in a simulated neuromorphic implementation, due to its optimised explicit forgetting mechanism.
 			  </p>
             </td>
           </tr>
