@@ -21,8 +21,7 @@
                 <name>Hector Garcia Rodriguez</name>
               </p>
               <p>
-                I am a ELLIS PhD student at  <a href=https://rohrbach.vision/>Marcus</a> and <a href=https://anna-rohrbach.net/>Anna Rohrbach</a>'s <a href=https://www.informatik.tu-darmstadt.de/mai/multimodal_ai/index.en.jsp>Multimodal AI Lab</a>. I am co-advised by <a href=https://scholar.google.com/citations?user=1lcY2z4AAAAJ&hl=en>Hervé Jégou</a>.
-              </p>
+                I am a ELLIS PhD student at  <a href=https://rohrbach.vision/>Marcus</a> and <a href=https://anna-rohrbach.net/>Anna Rohrbach</a>'s <a href=https://www.informatik.tu-darmstadt.de/mai/multimodal_ai/index.en.jsp>Multimodal AI Lab</a>.              </p>
               <p>
                 Previously, I was a research engineer on efficient deep learning at Huawei Zurich. I completed an MSc Machine Learning at University College London, graduating on the Dean's List (top 5%). During my MSc thesis, I was advised by <a href="https://www.tmoraitis.com/">Timoleon Moraitis</a> and <a href="https://pontus.stenetorp.se/">Pontus Stenetorp</a>. Previously, I interned as a Software Development Engineer in Amazon Web Services, and obtained a BSc Theoretical Physics from UCL with first-class honours.
               </p>
@@ -43,7 +42,7 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research</heading>
               <p>
-                I'm interested in multimodal representation learning: improving efficiency and reliability using adaptable networks with adjustable compute budgets, and using more contextualised representations for sequential decision making tasks.
+                I'm interested in improving the efficiency and reliability of Multimodal Large Language Models (MLLMs), especially when combined with reasoning and agentic tool use, and when dealing with text, images and video. Previously I have also worked in efficient brain-inspired deep learning.
               </p>
             </td>
           </tr>
@@ -92,6 +91,45 @@
 
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr onmouseout="sieves_stop()" onmouseover="sieves_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='sieves_image'>
+                  <img src='images/SIEVESQualitative.png' width="160"></div>
+                <img src='images/SIEVESTeaser.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function sieves_start() {
+                  document.getElementById('sieves_image').style.opacity = "1";
+                }
+
+                function sieves_stop() {
+                  document.getElementById('sieves_image').style.opacity = "0";
+                }
+                sieves_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2604.25855">
+                <papertitle>SIEVES: Selective Prediction Generalizes through Visual Evidence Scoring</papertitle>
+              </a>
+              <br>
+              <strong>Hector Garcia Rodriguez</strong>,
+              Marcus Rohrbach
+              <br>
+              <em>arXiv preprint</em>, 2025
+              <br>
+              <a href="https://arxiv.org/abs/2604.25855">arXiv</a> /
+              <a href="https://github.com/hector-gr/SIEVES">code</a>
+              <p></p>
+              <p>
+                We leverage the visual evidence produced during multimodal reasoning, where models zoom into relevant image regions, to predict how confident a user can be in an answer provided by an MLLM and abstain on low confidence answers. To do so, we train a smaller model to predict fine-grained scores focusing on answer correctness (<i>is the final answer reasonable?</i>), localization (<i>did the model look at the right place?</i>) and crop-answer coherence (<i>is the final answer coherent with the visual evidence?</i>). SIEVES improves coverage by up to 3x on OOD benchmarks including visual questions from blind users and autonomous driving, where reliability of autonomous systems is crucial, and transfers to proprietary models like o3 and Gemini-3-Pro without accessing their internal representations or logits.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr onmouseout="chrono_stop()" onmouseover="chrono_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
@@ -124,7 +162,6 @@
               <em>arXiv preprint</em> (under review)
               <br>
               <a href="https://arxiv.org/abs/2406.18113">arXiv</a> /
-              <a href="https://arxiv.org/pdf/2406.18113.pdf">pdf</a> /
               <a href="https://github.com/sudo-Boris/mr-Blip">code</a>
               <p></p>
               <p>
