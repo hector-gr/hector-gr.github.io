@@ -174,6 +174,8 @@
     .chat-step.tool { justify-self: end; background: #f6eee3; font: .78rem/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
     .chat-step img { width: min(100%, 620px); margin-top: 10px; border: 1px solid var(--line); border-radius: 8px; }
     .chat-step .compact-image { width: min(100%, 430px); }
+    .chat-step.reimagin { width: 78%; }
+    .inline-tool { margin-top: 10px; padding: 10px; border-radius: 8px; background: rgba(255,255,255,.62); font: .78rem/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; }
     .chat-label { display: block; margin-bottom: 4px; color: var(--muted); font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
     .correct { color: var(--green); font-weight: 700; }
     .incorrect { color: #a14848; font-weight: 700; }
@@ -249,6 +251,7 @@
       .scroll-hint { display: block; }
       .chat-stack { padding: 12px; }
       .chat-step { max-width: 100%; }
+      .chat-step.user, .chat-step.reimagin { width: 92%; }
       .results-figure { display: none; }
       .mobile-chart { display: block; }
       .legend { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; font-size: .75rem; }
@@ -343,10 +346,13 @@
               <p>How big is the thing that the small car will collide if it moving forward?</p>
               <img class="compact-image" src="assets/img/reimagin/collision-paper-input.png" alt="Collision-prediction scene with differently colored objects">
             </div>
-            <div class="chat-step baseline"><span class="chat-label">Gemini 3.1 Pro · Direct answer shown in paper</span><p><span class="incorrect">Answer: Red ✕</span></p></div>
-            <div class="chat-step tool"><span class="chat-label">ReImaGin · Image generation</span>generate_image("Draw a red arrow starting from the back of the cyan cruiser (motorcycle) and extending straight backward along its current heading to show its path.", image_1)</div>
-            <div class="chat-step model"><span class="chat-label">Generated image</span><img class="compact-image" src="assets/img/reimagin/collision-paper-generated.png" alt="Generated red trajectory arrow through the collision scene"></div>
-            <div class="chat-step model"><span class="chat-label">ReImaGin · Answer</span><p><span class="correct">Answer: Purple ✓</span></p></div>
+            <div class="chat-step model reimagin">
+              <span class="chat-label">ReImaGin · Reasoning summary</span>
+              <p>I need to visualize the object’s trajectory before identifying what it will hit.</p>
+              <div class="inline-tool">generate_image("Draw a red arrow starting from the back of the cyan cruiser (motorcycle) and extending straight backward along its current heading to show its path.", image_1)</div>
+              <img class="compact-image" src="assets/img/reimagin/collision-paper-generated.png" alt="Generated red trajectory arrow through the collision scene">
+              <p><span class="correct">Answer: Purple ✓</span></p>
+            </div>
           </div>
         </article>
 
@@ -358,10 +364,13 @@
               <p>Which point is closer to the camera: A or B?</p>
               <img class="compact-image" src="assets/img/reimagin/depth-paper-input.png" alt="Red stacked objects marked with points A and B">
             </div>
-            <div class="chat-step baseline"><span class="chat-label">Gemini 3.1 Pro · Direct answer shown in paper</span><p><span class="incorrect">Answer: B ✕</span></p></div>
-            <div class="chat-step tool"><span class="chat-label">ReImaGin · Image generation</span>generate_image("high-contrast grayscale depth map", image_1)</div>
-            <div class="chat-step model"><span class="chat-label">Generated image</span><img class="compact-image" src="assets/img/reimagin/depth-paper-generated.png" alt="Generated grayscale depth map retaining points A and B"></div>
-            <div class="chat-step model"><span class="chat-label">ReImaGin · Answer</span><p><span class="correct">Answer: A ✓</span></p></div>
+            <div class="chat-step model reimagin">
+              <span class="chat-label">ReImaGin · Reasoning summary</span>
+              <p>I need a depth map to compare the two marked points.</p>
+              <div class="inline-tool">generate_image("high-contrast grayscale depth map", image_1)</div>
+              <img class="compact-image" src="assets/img/reimagin/depth-paper-generated.png" alt="Generated grayscale depth map retaining points A and B">
+              <p><span class="correct">Answer: A ✓</span></p>
+            </div>
           </div>
         </article>
       </div>
