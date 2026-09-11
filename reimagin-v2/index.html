@@ -588,15 +588,15 @@
             <span class="avatar"><img src="assets/img/reimagin/icon-robot.png" alt=""></span>
             <div class="bubble">
               <span class="bubble-label">ReImaGin</span>
-              <p>I can use the generate_image_with_selection tool to create a unified view of the scene using the two images. Then, I can use the 3D view to create a top-down blueprint of the scene. This will help me clearly understand the spatial layout of the room and determine the relative positions of the door and the paper covered with writing.</p>
+              <p>I need to understand the spatial layout of the room.</p>
               <div class="tool-stack">
                 <div class="inline-tool">
                   <img src="assets/img/reimagin/icon-image-tool.png" alt="">
-                  <code>generate_image_with_selection(“use these two images to create a unified 3d view of the scene. the two images have overlap, use that to understand how they are related to each other. the accuracy in layout is the most important factor. Pay special attention to the door, the green chair, the desk, and the paper covered with writing. create a 3d perspective image. accuracy and consistency with the input images is very important, do not hallucinate anything.”)</code>
+                  <code>generate_image(“use these two images to create a unified 3d view of the scene…”)</code>
                 </div>
                 <div class="inline-tool">
                   <img src="assets/img/reimagin/icon-image-tool.png" alt="">
-                  <code>generate_image_with_selection(“Based on the scene shown in this image, create a *top-down blueprint* of the scene. The accuracy of the layout is extremely important. Label the door, the green chair, the desk, and the paper covered with writing. It is important that the orientation and layout of these objects is accurate. Triple check your layout before returning the output.”)</code>
+                  <code>generate_image(“Based on the scene shown in this image, create a top-down blueprint of the scene…”)</code>
                 </div>
               </div>
               <div class="message-media generated-pair">
