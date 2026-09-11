@@ -72,14 +72,6 @@
       font-size: 1.15rem;
     }
     .brand i { color: var(--violet); font-style: normal; }
-    .nav-links { display: flex; align-items: center; gap: 20px; }
-    .nav-links a {
-      color: var(--muted);
-      font-size: .88rem;
-      font-weight: 700;
-      text-decoration: none;
-    }
-    .nav-links a:hover { color: var(--ink); }
 
     .pill,
     .reveal-button,
@@ -502,7 +494,6 @@
 
     @media (max-width: 620px) {
       .nav { width: calc(100% - 32px); padding-top: 17px; }
-      .nav-links a:not(.pill) { display: none; }
       .nav .pill { min-height: 40px; padding-inline: 15px; font-size: .78rem; }
       .hero { padding: 96px 16px 56px; }
       h1 { font-size: clamp(3.2rem, 16vw, 5rem); }
@@ -558,11 +549,6 @@
 
   <nav class="nav" aria-label="Primary navigation">
     <a class="brand" href="#top"><i>Re</i>Ima<i>Gin</i></a>
-    <div class="nav-links">
-      <a href="#examples">Examples</a>
-      <a href="#results">Results</a>
-      <a class="pill" href="https://openreview.net/forum?id=jWMw2roMnh" target="_blank" rel="noopener">Read paper ↗</a>
-    </div>
   </nav>
 
   <main id="main">
@@ -596,7 +582,7 @@
             <span class="avatar"><img src="assets/img/reimagin/icon-robot.png" alt=""></span>
             <div class="bubble">
               <span class="bubble-label">ReImaGin</span>
-              <p>I need to understand the spatial layout of the room to determine the direction of the paper covered with writing relative to the door. I will use the generate_image tool to create a unified 3D view of the scene using both images, and then create a top-down blueprint to clearly see the relative positions.</p>
+              <p>I need to understand the spatial layout of the room to determine the direction of the paper covered with writing relative to the door. I will use the generate_image tool…</p>
               <div class="inline-tool">
                 <img src="assets/img/reimagin/icon-image-tool.png" alt="">
                 <code>generate_image(“Based on the scene shown in this image, create a *top-down blueprint* of the scene. The accuracy of the layout is extremely important. Label the door, the paper covered with writing, and the chairs. It is important that the orientation and layout of these objects is accurate. Triple check your layout before returning the output.”)</code>
@@ -604,7 +590,6 @@
               <div class="message-media one">
                 <img src="assets/img/reimagin/exact/office-blueprint.png" alt="Generated top-down blueprint of the office">
               </div>
-              <p>Based on the top-down blueprint, the door is located on the top wall. When entering the door, you would be facing into the room (towards the bottom of the blueprint). The paper covered with writing is located on the left wall of the blueprint (the shelving unit area). Relative to someone entering the door and facing into the room, the left wall of the blueprint is to their right. Therefore, the paper is directly to your right.</p>
               <p class="outcome good">Answer: C — Directly to your right ✓</p>
             </div>
           </div>
@@ -696,7 +681,6 @@
     <section class="section result" id="results">
       <div class="result-inner result-grid">
         <div>
-          <p class="eyebrow" style="color: var(--green)">The result</p>
           <h2>Beats text-only reasoning and specialized vision tools.</h2>
           <p>One image-generation tool improves performance across spatial reasoning, occlusion, visual puzzles, collision prediction, path tracing, and depth.</p>
         </div>
