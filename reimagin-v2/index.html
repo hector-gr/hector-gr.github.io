@@ -592,11 +592,11 @@
               <div class="tool-stack">
                 <div class="inline-tool">
                   <img src="assets/img/reimagin/icon-image-tool.png" alt="">
-                  <code>“use these two images to create a unified 3d view of the scene. the two images have overlap, use that to understand how they are related to each other. the accuracy in layout is the most important factor. Pay special attention to the door, the green chair, the desk, and the paper covered with writing. create a 3d perspective image. accuracy and consistency with the input images is very important, do not hallucinate anything.”</code>
+                  <code>generate_image_with_selection(“use these two images to create a unified 3d view of the scene. the two images have overlap, use that to understand how they are related to each other. the accuracy in layout is the most important factor. Pay special attention to the door, the green chair, the desk, and the paper covered with writing. create a 3d perspective image. accuracy and consistency with the input images is very important, do not hallucinate anything.”)</code>
                 </div>
                 <div class="inline-tool">
                   <img src="assets/img/reimagin/icon-image-tool.png" alt="">
-                  <code>“Based on the scene shown in this image, create a *top-down blueprint* of the scene. The accuracy of the layout is extremely important. Label the door, the green chair, the desk, and the paper covered with writing. It is important that the orientation and layout of these objects is accurate. Triple check your layout before returning the output.”</code>
+                  <code>generate_image_with_selection(“Based on the scene shown in this image, create a *top-down blueprint* of the scene. The accuracy of the layout is extremely important. Label the door, the green chair, the desk, and the paper covered with writing. It is important that the orientation and layout of these objects is accurate. Triple check your layout before returning the output.”)</code>
                 </div>
               </div>
               <div class="message-media generated-pair">
@@ -632,7 +632,7 @@
               <p>I can use the generate_image tool to convert the dashed lines into solid lines, which will make it easier to trace the paths without ambiguities.</p>
               <div class="inline-tool">
                 <img src="assets/img/reimagin/icon-image-tool.png" alt="">
-                <code>“convert the dashed lines into solid lines. do not change the layout or anything else.”</code>
+                <code>generate_image(“convert the dashed lines into solid lines. do not change the layout or anything else.”)</code>
               </div>
               <div class="message-media one"><img src="assets/img/reimagin/exact/tracing-solid.png" alt="Generated solid paths connecting the numbers and letters"></div>
               <p class="outcome good">Answer: DACB ✓</p>
@@ -671,7 +671,7 @@
               <p>The scene is split across two images, making relative positioning hard to track. I will use generate_image to seamlessly stitch these two images together into a single ultra-wide panoramic image based on their shared visual features (the foosball table and the framed picture on the teal wall).</p>
               <div class="inline-tool">
                 <img src="assets/img/reimagin/icon-image-tool.png" alt="">
-                <code>“Stitch these two overlapping images into a single continuous wide-angle panorama, seamlessly blending the shared overlap area (the foosball table and the framed picture on the teal wall) so the entire room is visible in one shot.”</code>
+                <code>generate_image(“Stitch these two overlapping images into a single continuous wide-angle panorama, seamlessly blending the shared overlap area (the foosball table and the framed picture on the teal wall) so the entire room is visible in one shot.”)</code>
               </div>
               <div class="message-media one"><img src="assets/img/reimagin/exact/tv-panorama.png" alt="Generated panorama joining the two room views"></div>
               <p class="outcome good">Answer: D — Go right ✓</p>
