@@ -356,6 +356,7 @@
     .hero-chat .bubble { padding: 12px; }
     .hero-chat .message-media img { aspect-ratio: 4 / 3; object-fit: cover; }
     .hero-chat .generated-pair img { object-fit: contain; background: white; }
+    .hero-chat .message-media.one img { aspect-ratio: 4 / 3; object-fit: contain; background: white; }
     .options { margin-top: 7px !important; color: var(--muted); font-size: .72rem !important; }
     .tool-stack { display: grid; gap: 7px; margin-top: 11px; }
     .tool-stack .inline-tool { margin-top: 0; }
@@ -589,18 +590,18 @@
             <div class="bubble">
               <span class="bubble-label">ReImaGin</span>
               <p>I need to understand the spatial layout of the room.</p>
-              <div class="tool-stack">
-                <div class="inline-tool">
-                  <img src="assets/img/reimagin/icon-image-tool.png" alt="">
-                  <code>generate_image(“use these two images to create a unified 3d view of the scene…”)</code>
-                </div>
-                <div class="inline-tool">
-                  <img src="assets/img/reimagin/icon-image-tool.png" alt="">
-                  <code>generate_image(“Based on the scene shown in this image, create a top-down blueprint of the scene…”)</code>
-                </div>
+              <div class="inline-tool">
+                <img src="assets/img/reimagin/icon-image-tool.png" alt="">
+                <code>generate_image(“use these two images to create a unified 3d view of the scene. the two images have overlap, use that to understand how they are related to each other. the accuracy in layout is the most important factor. Pay special attention to the door, the paper covered with writing, and the chairs. create a 3d perspective image. accuracy and consistency with the input images is very important, do not hallucinate anything.”)</code>
               </div>
-              <div class="message-media generated-pair">
+              <div class="message-media one">
                 <img src="assets/img/reimagin/exact/office-unified.png" alt="Generated unified view of the office">
+              </div>
+              <div class="inline-tool">
+                <img src="assets/img/reimagin/icon-image-tool.png" alt="">
+                <code>generate_image(“Based on the scene shown in this image, create a *top-down blueprint* of the scene. The accuracy of the layout is extremely important. Label the door, the paper covered with writing, and the chairs. It is important that the orientation and layout of these objects is accurate. Triple check your layout before returning the output.”)</code>
+              </div>
+              <div class="message-media one">
                 <img src="assets/img/reimagin/exact/office-blueprint.png" alt="Generated top-down blueprint of the office">
               </div>
               <p class="outcome good">Answer: C — Directly to your right ✓</p>
@@ -623,6 +624,13 @@
               <span class="bubble-label">User</span>
               <p>Trace the lines to match each number (1, 2, 3, 4) to its corresponding letter (A, B, C, D).</p>
               <div class="message-media one"><img src="assets/img/reimagin/exact/tracing-input.png" alt="Dashed paths connecting numbers 1 to 4 and letters A to D"></div>
+            </div>
+          </div>
+          <div class="message baseline">
+            <span class="avatar"><img src="assets/img/reimagin/icon-robot.png" alt=""></span>
+            <div class="bubble">
+              <span class="bubble-label">Text-only</span>
+              <p class="outcome bad">Answer: BACD ✕</p>
             </div>
           </div>
           <div class="message model">
