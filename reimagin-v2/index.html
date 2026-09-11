@@ -383,7 +383,6 @@
     .bubble-label { display: block; margin-bottom: 5px; color: var(--muted); font-size: .63rem; font-weight: 950; letter-spacing: .09em; text-transform: uppercase; }
     .bubble p { margin: 0; font-size: .86rem; line-height: 1.45; }
     .bubble p + p { margin-top: 10px; }
-    .trace-points { margin: 10px 0 0; padding-left: 20px; color: var(--ink); font-size: .82rem; line-height: 1.5; }
     .bubble code { display: block; overflow-wrap: anywhere; color: #4b347e; font: .72rem/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
     .inline-tool { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 9px; align-items: start; margin-top: 11px; padding: 10px; border-radius: 11px; background: rgba(98,70,199,.08); }
     .inline-tool img { width: 28px; height: 28px; object-fit: contain; }
@@ -607,16 +606,6 @@
                   <code>generate_image(“convert the dashed lines into solid lines. do not change the layout or anything else.”)</code>
                 </div>
                 <div class="message-media one"><img src="assets/img/reimagin/exact/tracing-solid.png" alt="Generated solid paths connecting the numbers and letters"></div>
-                <p>Based on the generated image with solid lines, I can trace the paths clearly. The instruction states that the lines do not intersect.</p>
-                <ul class="trace-points">
-                  <li>Tracing from number 1, the line goes upwards, arches over to the right, and goes down to connect to letter D.</li>
-                  <li>Tracing from number 2, the line goes left, curves down, and hooks to connect to letter A.</li>
-                  <li>Tracing from number 3, the line curves up, goes left, and then down to connect to letter C.</li>
-                  <li>Tracing from number 4, the line goes right, dips slightly, and then curves up to connect to letter B.</li>
-                </ul>
-                <p>This is also consistent with the rule that lines do not intersect: since 1 is below 4, if 1 were to connect to B (which is above) and 4 were to connect to D (which is below and right), their paths would have to cross. Therefore, 1 must connect to D and 4 must connect to B.</p>
-                <p>So the matches are:<br>1 -&gt; D<br>2 -&gt; A<br>3 -&gt; C<br>4 -&gt; B</p>
-                <p>Writing the letters in the ascending numerical order of their matches (1 to 4) gives &quot;DACB&quot;.</p>
                 <p class="outcome good">Answer: DACB ✓</p>
               </div>
             </div>
