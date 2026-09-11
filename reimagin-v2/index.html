@@ -54,25 +54,6 @@
     }
     .skip-link:focus { top: 16px; }
 
-    .nav {
-      position: absolute;
-      inset: 0 0 auto;
-      z-index: 20;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: min(1180px, calc(100% - 40px));
-      margin: 0 auto;
-      padding: 22px 0;
-    }
-    .brand {
-      text-decoration: none;
-      font-weight: 900;
-      letter-spacing: -.04em;
-      font-size: 1.15rem;
-    }
-    .brand i { color: var(--violet); font-style: normal; }
-
     .pill,
     .reveal-button,
     .switch-button {
@@ -104,7 +85,7 @@
       min-height: 100svh;
       display: grid;
       align-items: center;
-      padding: 112px max(20px, calc((100vw - 1180px) / 2)) 64px;
+      padding: 48px max(20px, calc((100vw - 1180px) / 2)) 36px;
       overflow: hidden;
       position: relative;
     }
@@ -493,9 +474,7 @@
     }
 
     @media (max-width: 620px) {
-      .nav { width: calc(100% - 32px); padding-top: 17px; }
-      .nav .pill { min-height: 40px; padding-inline: 15px; font-size: .78rem; }
-      .hero { padding: 96px 16px 56px; }
+      .hero { padding: 48px 16px 42px; }
       h1 { font-size: clamp(3.2rem, 16vw, 5rem); }
       .dek { margin-top: 20px; }
       .paper-meta { margin-top: 18px; }
@@ -546,10 +525,6 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
-  <nav class="nav" aria-label="Primary navigation">
-    <a class="brand" href="#top"><i>Re</i>Ima<i>Gin</i></a>
-  </nav>
 
   <main id="main">
     <section class="hero" id="top">
