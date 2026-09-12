@@ -242,6 +242,26 @@
     .section {
       padding: clamp(78px, 11vw, 150px) max(20px, calc((100vw - 1180px) / 2));
     }
+    .video-section {
+      background: var(--ink);
+      color: white;
+    }
+    .video-inner { max-width: 1180px; margin: 0 auto; }
+    .video-section .eyebrow { color: var(--green); }
+    .video-section h2 { max-width: none; margin-bottom: clamp(30px, 5vw, 54px); }
+    .video-frame {
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: clamp(16px, 2.4vw, 28px);
+      background: #0d0c0f;
+      box-shadow: 0 28px 80px rgba(0,0,0,.34);
+    }
+    .video-frame video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #0d0c0f;
+    }
     .section-head {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -494,6 +514,8 @@
       .generated-observation { grid-template-columns: 105px 1fr; }
       .generated-observation img { width: 105px; }
       .section { padding-inline: 16px; }
+      .video-section { padding-block: 68px; }
+      .video-frame { border-radius: 14px; }
       .section-head { gap: 22px; margin-bottom: 30px; }
       .logic { justify-content: center; gap: 6px; padding: 14px 9px; border-radius: 16px; white-space: nowrap; font-size: .7rem; }
       .logic .active { padding: 8px 10px; }
@@ -569,6 +591,19 @@
               <p class="outcome good">Answer: C — Directly to your right ✓</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section video-section" id="video">
+      <div class="video-inner">
+        <p class="eyebrow">Video overview</p>
+        <h2>ReImaGin, explained.</h2>
+        <div class="video-frame">
+          <video controls playsinline preload="metadata" poster="assets/img/reimagin/video-poster.jpg" aria-label="ReImaGin video overview">
+            <source src="assets/video/reimagin-explainer.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
         </div>
       </div>
     </section>
