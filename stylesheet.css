@@ -126,6 +126,41 @@ name {
   -webkit-transition: opacity .2s ease-in-out;
 }
 
+.figure-toggle {
+  cursor: pointer;
+}
+
+.figure-toggle .two {
+  opacity: 0;
+}
+
+.figure-toggle > img {
+  transition: opacity .2s ease-in-out;
+}
+
+.figure-toggle.show-alt .two {
+  opacity: 1 !important;
+}
+
+.figure-toggle.show-alt > img {
+  opacity: 0;
+}
+
+.figure-toggle:focus-visible {
+  outline: 3px solid #1772d0;
+  outline-offset: 4px;
+}
+
+@media (hover: hover) {
+  .figure-toggle:hover .two {
+    opacity: 1;
+  }
+
+  .figure-toggle:hover > img {
+    opacity: 0;
+  }
+}
+
 span.highlight {
   background-color: #ffffd0;
 }
