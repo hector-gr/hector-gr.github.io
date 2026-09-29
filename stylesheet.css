@@ -130,21 +130,90 @@ span.highlight {
   background-color: #ffffd0;
 }
 
-@media (max-width: 600px) {
-  table.publication,
-  table.publication > tbody,
-  table.publication > tbody > tr,
-  table.publication > tbody > tr > td {
+.mobile-profile-photo {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  table.profile-table,
+  table.profile-table > tbody,
+  table.profile-table > tbody > tr {
+    display: block;
+    width: 100%;
+  }
+
+  table.profile-table .profile-copy {
     display: block;
     width: 100% !important;
+    box-sizing: border-box;
+    padding: 5% !important;
+  }
+
+  table.profile-table .profile-photo {
+    display: none;
+  }
+
+  .mobile-profile-photo {
+    display: block;
+    float: right;
+    width: 38%;
+    max-width: 150px;
+    margin: 0 0 12px 18px;
+  }
+
+  .mobile-profile-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  table.profile-table .profile-copy::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  table.publication,
+  table.publication > tbody {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  table.publication > tbody > tr {
+    display: flex !important;
+    flex-direction: column;
+    width: 100% !important;
+  }
+
+  table.publication > tbody > tr > td {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
     box-sizing: border-box;
   }
 
   table.publication > tbody > tr > td:first-child {
-    padding-bottom: 0 !important;
+    padding: 20px 20px 0 !important;
+  }
+
+  table.publication > tbody > tr > td:nth-child(2) {
+    padding-top: 12px !important;
   }
 
   table.publication .one {
+    width: min(100%, 280px);
+    height: 180px;
     margin: 0 auto;
+  }
+
+  table.publication .two {
+    width: 100%;
+    height: 180px;
+  }
+
+  table.publication .one img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
   }
 }
