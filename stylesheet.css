@@ -129,3 +129,22 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+@media (max-width: 600px) {
+  table.publication,
+  table.publication > tbody,
+  table.publication > tbody > tr,
+  table.publication > tbody > tr > td {
+    display: block;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  table.publication > tbody > tr > td:first-child {
+    padding-bottom: 0 !important;
+  }
+
+  table.publication .one {
+    margin: 0 auto;
+  }
+}
