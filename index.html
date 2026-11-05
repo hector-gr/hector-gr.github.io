@@ -97,9 +97,38 @@
         <table class="publication" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one figure-toggle" role="button" tabindex="0" aria-label="Toggle CARE figures">
+                <div class="two" id="care_image">
+                  <img src="images/CAREResults.png" width="160" alt="CARE coverage at 5% risk on math and out-of-distribution benchmarks">
+                </div>
+                <img src="images/CAREMethod.png" width="160" alt="CARE compares confidence across questions to reward selective prediction">
+              </div>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="papers/cross-question-reliable-reinforcement-learning.pdf">
+                <papertitle>Cross-Question Reliable Reinforcement Learning</papertitle>
+              </a>
+              <br>
+              <strong>Hector Garcia Rodriguez</strong>,
+              <a href="https://rohrbach.vision/">Marcus Rohrbach</a>
+              <br>
+              <em>NeurIPS</em>, 2026
+              <br>
+              <a href="papers/cross-question-reliable-reinforcement-learning.pdf">paper</a>
+              <p></p>
+              <p>
+                We train LLMs to verbalize confidence in their answers so they can abstain on the hardest questions and avoid misleading users. CARE (Cross-Question Abstention Reward Estimation) rewards confidence scores by comparing answers across questions, so each answer’s confidence is rewarded based on the others, rather than simply being pushed toward 1 when correct and 0 when incorrect in order to match the correctness of the answer. At 5% risk (i.e. 95% accuracy among non-abstained answers), it increases the share of answered (i.e. non-abstained) questions from 0.8% to 42.4% on math benchmarks, and from 12.3% to 23.6% on unseen knowledge, reasoning, and math benchmarks.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <table class="publication" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one figure-toggle" role="button" tabindex="0" aria-label="Toggle ReImaGin figures">
                 <div class="two" id="reimagin_image">
-                  <img src="images/ReImaGinBarChart.png" width="160" alt="Bar chart showing the impact of test-time scaling on spatial reasoning">
+                  <img src="images/ReImaGinResults.png" width="160" alt="ReImaGin compared with No Tools and Visual Sketchpad across six visual reasoning tasks">
                 </div>
                 <img src="images/ReImaGinFigure1.png" width="160" alt="ReImaGin Figure 1 showing image generation used to create a top-down map for spatial reasoning">
               </div>
